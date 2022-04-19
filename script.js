@@ -11,10 +11,10 @@ const apiKey = '8QI3AvNlYA4iEYTSoCQAO4YhuBbwJDPvm3kz2lfwK7Y';
 const apiUrl = `https://api.unsplash.com/photos/random/?client_id=${apiKey}&count=${count}`;
 
 function imageLoaded() {
-  console.log('image loaded');
   imagesLoaded++;
   if (imagesLoaded === totalImages) {
     ready = true;
+    loader.hidden = true;
     console.log('ready =', ready);
   }
 }
